@@ -1,5 +1,13 @@
 This project shows that sourcemaps are not produced for server actions/server components if you build the app using `npm run build` (that executes `next build`), then start it using `npm run start` (that runs `next start`)as described in [this blog post](https://www.highlight.io/blog/lw5-next-js-server-sourcemaps).
 
+* `npm run build` uses `next build` with `--debug` switch.
+* `I have tried running `npm run build` with with `NODE_ENV=development` and without
+* Have set `productionBrowserSourceMaps: true,` in `next.config.mjs`
+
+No combination of these seems to - including all of these measures together - generate source maps for the server side function `serverCalculate`.
+
+If I run `npm run dev` instead, then not only do I see detailed stack traces with soruce code on both client- and server-side errors , there is also a nice error reporting UX that shows colour coded source code where error occurred.
+
 ![alt text](image.png)
 
 ## Getting Started
