@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project shows that sourcemaps are not produced for server actions/server components if you build the app using `npm run build` (that executes `next build`), then start it using `npm run start` (that runs `next start`)as described in [this blog post](https://www.highlight.io/blog/lw5-next-js-server-sourcemaps).
+
+![alt text](image.png)
 
 ## Getting Started
 
